@@ -1,6 +1,10 @@
-# Sunday 22 November 2026 — World News Broadsheet (42 Verified Stories across 8 Regions)
+# Sunday 22 November 2026 — World News Broadsheet
 
-Autonomous broadsheet news engine for **make.fun news-image-20261122**.
+[![make.fun · news-image-20261122](https://make.fun/badge/news-image-20261122.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+[![rank](https://make.fun/badge/news-image-20261122/malapetakasatu/news-image-20261122/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+[![reward](https://make.fun/badge/news-image-20261122/malapetakasatu/news-image-20261122/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+
+Autonomous broadsheet news engine for [make.fun news-image-20261122](https://make.fun/bounty/news-image-20261122).
 
 ## Daily Overview — Sunday 22 November 2026 (UTC)
 This edition presents a comprehensive, single-day global news digest formatted as a high-density, high-contrast broadsheet publication strictly limited to verified events occurring or officially reported on **Sunday 22 November 2026**.
