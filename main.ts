@@ -1,11 +1,23 @@
-// A working news-image-daily entry (Node 22, standard library only): its image is the entry.png beside this file, and
-// the program copies it to /output/entry.png. A starting point, not a winner: replace the image. The gate takes a
-// whole PNG or JPEG of at most 1 MiB and 1024 by 1024 pixels, and the judge sees exactly the bytes copied.
-//
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+/**
+ * make.fun news-image-20261122 entrypoint
+ * Sunday 22 November 2026 World News Broadsheet
+ * 
+ * Delivers verified single-day news broadsheet image to /output/entry.png
+ */
 
-import { copyFileSync } from 'node:fs';
+import { copyFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-copyFileSync(new URL('./entry.png', import.meta.url), join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.png'));
+const SOURCE_IMAGE = new URL('./entry.png', import.meta.url);
+const TARGET_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+const TARGET_FILE = join(TARGET_DIR, 'entry.png');
+
+if (!existsSync(SOURCE_IMAGE)) {
+  console.error('Source image entry.png not found');
+  process.exit(1);
+}
+
+const stats = statSync(SOURCE_IMAGE);
+console.log(`Copying broadsheet (${stats.size} bytes) to ${TARGET_FILE}...`);
+copyFileSync(SOURCE_IMAGE, TARGET_FILE);
+console.log('Successfully written entry.png');
